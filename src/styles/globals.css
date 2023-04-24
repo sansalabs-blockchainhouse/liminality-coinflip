@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --lightCoin: #ff00b2;
+    --mediumCoin: #000000;
+    --coin: #000000;
+    --darkCoin: #ff00b2;
+    --hover:  #000;
+  }
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url(../../public/fonts/NunitoSans-Regular.ttf);
+}
+
+@layer components {
+  .body-background {
+    background-image: url('/background.png');
+  }
+}
+
+
+
+body {
+  @apply w-screen h-screen font-body text-white body-background bg-no-repeat bg-fixed bg-cover font-bold;
+}
+
+html {
+  @apply overflow-y-scroll snap-start scrollbar-thumb-gray-500 scrollbar-thin
+}
+
+.button-gradient {
+  border: 1px solid transparent;
+  background: linear-gradient(to bottom, #001432dd, #001432dd) padding-box, padding-box,
+    linear-gradient(180deg, rgba(230, 20, 100, 0) 10.44%, #e61464 83.55%) border-box;
+}
+
+@media (max-width: 768px) {
+  .wallet-adapter-modal-wrapper {
+  /* background: #3d2b1d !important; */
+  border-radius: 4px !important;
+  transform:translateZ(2000px) !important;
+  z-index: 2000 !important;
+  position:absolute;
+  bottom:0;
+  align-self: flex-end;
+  }
+}
+
+.wallet-adapter-button-trigger {
+  display: flex;
+  justify-content: center;
+  background: transparent !important;
+  text-transform: uppercase !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  color: white !important;
+  font-family: 'Nunito Sans'!important;
+  width: 200px !important;
+  height: 44px !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  border: 1px solid white !important;
+  border-radius: 0 !important;
+  margin-right: 20px !important;
+}
+
+@media(max-width: 400px){
+  .wallet-adapter-button-trigger{
+    margin-right: 0px !important;
+  }
+}
+
+.wallet-adapter-button-trigger:hover {
+  background: white !important;
+  border: 2px solid white !important;
+  color: black !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+
+.teste {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  background-color: rgb(24 0 41 / 0.95);
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 265px;
+  position: absolute !important;
+  display: flex;
+  z-index: 50 !important;
+  transform:translateZ(2000px) !important;
+
+  top: 72px;
+
+}
+/*COLOR & SIZES ========================================*/
+
+.coin {
+  transform-style: preserve-3d;
+  @apply relative w-[12em] h-[12em] flex flex-col items-center justify-center cursor-pointer;
+}
+
+.coin-shadow {
+  position: relative;
+}
+
+.coin-shadow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  z-index: 0;
+}
+
+.coin-front,
+.coin-back {
+  transform-style: preserve-3d;
+  background: linear-gradient(to right, var(--lightCoin), var(--mediumCoin), var(--coin));
+  border: 2px solid var(--coin);
+  @apply w-full h-full flex items-center justify-center absolute rounded-full transition-all ease-in-out duration-[1.5s];
+}
+
+.coin-front {
+  transform: translateZ(0.8em);
+}
+
+.coin-back {
+  transform: translateZ(-0.8em) rotateY(180deg);
+}
+
+.coin-front::before,
+.coin-back::before {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+  background: var(--coin);
+  background-image: repeating-linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 7px,
+    var(--darkCoin) 7px,
+    var(--darkCoin) 10px
+  );
+  border: 2px solid var(--coin);
+  transform: translateZ(-1px);
+  transform-style: preserve-3d;
+}
+
+.coin-middle {
+  height: 100%;
+  width: 1.5em;
+  background: var(--coin);
+  background-image: repeating-linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 7px,
+    var(--darkCoin) 7px,
+    var(--darkCoin) 10px
+  );
+  transform: rotateY(90deg);
+  position: absolute;
+  border-top: 4px solid var(--coin);
+  border-bottom: 4px solid var(--coin);
+  animation: idle 2s ease infinite;
+  transform-style: preserve-3d;
+}
+
+/* DESIGN ==================================*/
+
+.depth-front,
+.depth-back {
+  /* width: 10em;
+  height: 10em; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 3px solid black;
+  background: linear-gradient(to left, var(--mediumCoin), var(--coin));
+
+  transform-style: preserve-3d;
+}
+
+.depth-front img,
+.depth-back img {
+  width: 85%;
+  height: 85%;
+}
+
+.depth-front,
+.depth-back {
+  transform: translateZ(1px);
+}
