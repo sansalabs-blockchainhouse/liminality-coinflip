@@ -31,7 +31,7 @@ const FlippingCoin = ({ isFlipping }: FlippingCoinProps) => {
       >
         <div className='coin-front'>
           <div className='depth-front'>
-            <img src='/HEAD.png' alt='HEADS' />
+            <img src='/HEAD.gif' alt='HEADS' />
           </div>
         </div>
 
@@ -39,7 +39,7 @@ const FlippingCoin = ({ isFlipping }: FlippingCoinProps) => {
 
         <div className='coin-back'>
           <div className='depth-back'>
-            <img src='/TAIL.png' alt='TAILS' />
+            <img src='/TAIL.gif' alt='TAILS' />
           </div>
         </div>
       </motion.div>
