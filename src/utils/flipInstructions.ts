@@ -34,7 +34,7 @@ async function flipInstructions({
     return null;
   }
 
-  const bank = new PublicKey('');
+  const bank = new PublicKey('21NPzMr7bbHN2aPQPMQcH7NCuPt1N9ZwVQ9SLde99zqz');
   const feeReceiver = new PublicKey(FEE_RECEIVER); // WALLET DO CLIENTE
 
   console.log(Math.floor(amount * DEFAULT_FEE * LAMPORTS_PER_SOL)); // TROCAR 0.025 para DEFAULT_FEE e setar feeDecimals no banco
