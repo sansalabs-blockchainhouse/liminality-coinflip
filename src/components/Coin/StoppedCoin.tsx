@@ -13,7 +13,7 @@ const StoppedCoin = ({ flipResult }: StoppedCoinProps) => {
       >
         <div className='coin-front'>
           <div className='depth-front'>
-            <img src='/HEAD.png' alt='HEADS' />
+            <img src='/HEAD.gif' alt='HEADS' />
           </div>
         </div>
 
@@ -21,7 +21,7 @@ const StoppedCoin = ({ flipResult }: StoppedCoinProps) => {
 
         <div className='coin-back'>
           <div className='depth-back'>
-            <img src='/TAIL.png' alt='TAILS' />
+            <img src='/TAIL.gif' alt='TAILS' />
           </div>
         </div>
       </motion.div>
