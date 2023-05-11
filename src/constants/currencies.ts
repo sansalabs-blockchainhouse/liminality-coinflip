@@ -2,7 +2,7 @@ const currencies = [
   {
     value: 'SOL',
     mintAddress: 'sol',
-    betValues: [0.01, 0.5, 1, 3, 5]
+    betValues: [0.1, 0.5, 1, 3, 5]
   },
   {
     value: 'DNA',
