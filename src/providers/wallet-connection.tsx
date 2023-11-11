@@ -30,7 +30,7 @@ function WalletConnectionProvider({ children }: WalletConnectionProviderProps) {
 
   const endpoint = useMemo(
     () =>
-      'https://fabled-magical-panorama.solana-mainnet.discover.quiknode.pro/2af224eaab7cf91c93d2aa1a62b0d8cea5b3d33e/' ||
+      'https://polished-fittest-gadget.solana-mainnet.quiknode.pro/c4070385d8f16e3616b2c70b7e1e63811153bcce/' ||
       clusterApiUrl(network),
     [network]
   );
