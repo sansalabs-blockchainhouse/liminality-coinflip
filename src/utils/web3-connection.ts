@@ -1,12 +1,12 @@
 import { Connection } from '@solana/web3.js';
 
 const connection = new Connection(
-  'https://polished-fittest-gadget.solana-mainnet.quiknode.pro/c4070385d8f16e3616b2c70b7e1e63811153bcce/',
+  'https://purple-blissful-replica.solana-mainnet.quiknode.pro/3a3921409b235a94eb644a444c43c82d0514f80a/',
   'confirmed'
 );
 
 const quickNode = new Connection(
-  'https://polished-fittest-gadget.solana-mainnet.quiknode.pro/c4070385d8f16e3616b2c70b7e1e63811153bcce/',
+  'https://purple-blissful-replica.solana-mainnet.quiknode.pro/3a3921409b235a94eb644a444c43c82d0514f80a/',
   'confirmed'
 );
 
